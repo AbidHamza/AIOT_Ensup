@@ -47,8 +47,12 @@ secrets/
 *.sqlite3
 data/
 logs/
-mqtt-data/
-mqtt-log/
+
+# MQTT data et logs (mais garder les README pédagogiques)
+mqtt-data/*
+!mqtt-data/README.md
+mqtt-log/*
+!mqtt-log/README.md
 
 # OS
 Thumbs.db
