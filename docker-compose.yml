@@ -1,0 +1,109 @@
+version: '3.8'
+
+services:
+  # Broker MQTT (Mosquitto)
+  mqtt-broker:
+    image: eclipse-mosquitto:2.0
+    container_name: aiot-academy-mqtt
+    ports:
+      - "1883:1883"   # MQTT non sécurisé
+      - "8883:8883"   # MQTT avec TLS (si configuré)
+      - "9001:9001"   # WebSocket
+    volumes:
+      - ./mqtt-config:/mosquitto/config
+      - ./mqtt-data:/mosquitto/data
+      - ./mqtt-log:/mosquitto/log
+    networks:
+      - aiot-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "mosquitto_sub", "-h", "localhost", "-t", "test", "-C", "1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # PostgreSQL (stockage des données IoT)
+  postgres:
+    image: postgres:15-alpine
+    container_name: aiot-academy-postgres
+    environment:
+      POSTGRES_USER: aiot_user
+      POSTGRES_PASSWORD: aiot_password_dev  # Dev uniquement !
+      POSTGRES_DB: aiot_academy
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - aiot-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aiot_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis (cache et queue pour traitement stream)
+  redis:
+    image: redis:7-alpine
+    container_name: aiot-academy-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - aiot-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Grafana (observabilité - optionnel, utilisé dans Room 7)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: aiot-academy-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin_dev  # Dev uniquement !
+      GF_INSTALL_PLUGINS: grafana-clock-panel,grafana-simple-json-datasource
+    volumes:
+      - grafana-data:/var/lib/grafana
+    networks:
+      - aiot-network
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+
+  # InfluxDB (time-series DB - optionnel, utilisé dans Room 4)
+  influxdb:
+    image: influxdb:2.7-alpine
+    container_name: aiot-academy-influxdb
+    ports:
+      - "8086:8086"
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: aiot_user
+      DOCKER_INFLUXDB_INIT_PASSWORD: aiot_password_dev  # Dev uniquement !
+      DOCKER_INFLUXDB_INIT_ORG: aiot-academy
+      DOCKER_INFLUXDB_INIT_BUCKET: iot-data
+    volumes:
+      - influxdb-data:/var/lib/influxdb2
+    networks:
+      - aiot-network
+    restart: unless-stopped
+
+networks:
+  aiot-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
+  redis-data:
+  grafana-data:
+  influxdb-data:
+

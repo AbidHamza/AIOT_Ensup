@@ -1,0 +1,12 @@
+# Requirements pour Room 1 - Fondations IoT
+
+# Simulation et génération de données
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Visualisation (optionnel pour Lab 2)
+matplotlib>=3.7.0
+
+# Tests
+pytest>=7.4.0
+

@@ -1,0 +1,8 @@
+# Requirements pour Room 2 - Protocoles IoT MQTT
+
+# Client MQTT
+paho-mqtt>=1.6.1
+
+# Pour utiliser les capteurs de Room 1
+# (Assurez-vous que Room 1 est dans le PYTHONPATH ou copiez les fichiers nécessaires)
+
