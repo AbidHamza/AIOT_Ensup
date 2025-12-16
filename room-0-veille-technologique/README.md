@@ -2,7 +2,7 @@
 
 > Fondations : comprendre les environnements connectés, l'IoT/AIoT, et maîtriser la veille technologique, juridique et réglementaire
 
-## 📋 Objectifs pédagogiques
+## Objectifs pédagogiques
 
 À la fin de cette room, vous serez capable de :
 
@@ -13,11 +13,11 @@
 - Évaluer les risques juridiques et proposer des mesures de conformité
 - Analyser des cas pratiques de veille technologique et juridique
 
-## 🎯 Durée estimée
+## À propos de cette room
 
-12 heures (conforme au programme RNCP38920BC01 - Module 1)
+Cette room est conforme au programme RNCP38920BC01 - Module 1. Prenez le temps nécessaire pour bien comprendre chaque concept. La compréhension est plus importante que la vitesse.
 
-## 📚 Concepts abordés
+## Concepts abordés
 
 ### Chapitre 1 : Environnements connectés
 
@@ -186,7 +186,7 @@
   - Défis : fragmentation réglementaire, évolution rapide
   - Opportunités : innovation, différenciation
 
-## 🏃 Labs et exercices
+## Labs et exercices
 
 ### Lab 1 : Mise en place d'une veille technologique IoT
 
@@ -295,7 +295,7 @@ Pour chacun des secteurs suivants (santé, agriculture, industrie), rédiger :
 
 **Livrables** : Étude de cas complète (5-7 pages)
 
-## 📖 Ressources et bibliographie
+## Ressources et bibliographie
 
 ### Livres
 
@@ -320,7 +320,7 @@ Pour chacun des secteurs suivants (santé, agriculture, industrie), rédiger :
 - **NIST Cybersecurity Framework** : Cadre de sécurité cybersécurité
 - **IEC 62443** : Sécurité des systèmes industriels (IoT industriel)
 
-## ✅ Checklist de validation
+## Checklist de validation
 
 Avant de passer à la Room 1, assurez-vous d'avoir :
 
@@ -332,14 +332,14 @@ Avant de passer à la Room 1, assurez-vous d'avoir :
 - [ ] Produit un premier rapport de veille technologique
 - [ ] Identifié les réglementations applicables à votre secteur d'intérêt
 
-## ➡️ Suite
+## Suite
 
 Une fois cette room complétée, vous pouvez passer à :
 
 - **Room 1 : Fondations IoT** - Simulateurs de capteurs, bases techniques
 - **Room 2 : Protocoles IoT - MQTT** - Communication IoT pratique
 
-## 📝 Modalités d'évaluation (conforme RNCP38920BC01)
+## Modalités d'évaluation (conforme RNCP38920BC01)
 
 **Production individuelle écrite** : Note d'information sur la veille professionnelle comprenant :
 

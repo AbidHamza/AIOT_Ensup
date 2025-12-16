@@ -2,7 +2,7 @@
 
 > Projet complet intégrant tous les concepts appris
 
-## 📋 Objectifs pédagogiques
+## Objectifs pédagogiques
 
 À la fin de cette room, vous aurez :
 
@@ -11,9 +11,9 @@
 - Déployé et testé le système end-to-end
 - Documenté l'architecture et le déploiement
 
-## 🎯 Durée estimée
+## À propos de cette room
 
-12-16 heures
+Cette room est votre projet final. Elle vous permet d'intégrer tous les concepts appris dans les rooms précédentes. Prenez le temps nécessaire pour créer un projet complet et bien documenté.
 
 ## 📚 Projet : Système de monitoring intelligent
 
@@ -50,7 +50,7 @@ Créer un système complet de monitoring d'environnement intelligent qui :
 - Tests end-to-end
 - Présentation du projet
 
-## ✅ Checklist finale
+## Checklist finale
 
 - [ ] Tous les composants sont intégrés
 - [ ] Le système fonctionne end-to-end
@@ -58,9 +58,9 @@ Créer un système complet de monitoring d'environnement intelligent qui :
 - [ ] Le monitoring est actif
 - [ ] La documentation est complète
 
-## 🎓 Félicitations !
+## Félicitations !
 
-Vous avez terminé la formation AIoT Academy ! 🎉
+Vous avez terminé la formation AIoT Academy !
 
 ---
 

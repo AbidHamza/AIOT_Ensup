@@ -2,7 +2,7 @@
 
 > Monitoring, logging, métriques et gestion du cycle de vie ML
 
-## 📋 Objectifs pédagogiques
+## Objectifs pédagogiques
 
 À la fin de cette room, vous serez capable de :
 
@@ -12,11 +12,11 @@
 - Monitorer les performances des modèles ML
 - Implémenter un pipeline MLOps basique
 
-## 🎯 Durée estimée
+## À propos de cette room
 
-6-8 heures
+Cette room vous apprend à monitorer vos systèmes IoT et à gérer le cycle de vie des modèles ML. Ces compétences sont essentielles pour maintenir des systèmes en production.
 
-## 📚 Concepts abordés
+## Concepts abordés
 
 1. **Observabilité**
    - Logging (structuré, niveaux)
@@ -33,11 +33,11 @@
    - Pipeline de réentraînement
    - A/B testing simple
 
-## 🏃 Lab 1 : Dashboard Grafana
+## Lab 1 : Dashboard Grafana
 
 Créer un dashboard pour visualiser les données IoT et les métriques ML.
 
-## ➡️ Suite
+## Suite
 
 Une fois cette room terminée, passez au [Room 8 : Projet final end-to-end](../room-8-capstone-end-to-end/).
 

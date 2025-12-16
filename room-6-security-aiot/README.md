@@ -2,7 +2,7 @@
 
 > Sécuriser les systèmes AIoT : identité, secrets, OTA, conformité RGPD
 
-## 📋 Objectifs pédagogiques
+## Objectifs pédagogiques
 
 À la fin de cette room, vous serez capable de :
 
@@ -17,11 +17,11 @@
 - Analyser les risques et élaborer un plan de gestion des risques
 - Assurer la conformité réglementaire (RGPD, sécurité)
 
-## 🎯 Durée estimée
+## À propos de cette room
 
-12-16 heures (conforme au programme RNCP38920BC01 - Module 8)
+Cette room est conforme au programme RNCP38920BC01 - Module 8. La sécurité est un aspect fondamental des systèmes IoT. Prenez le temps nécessaire pour bien comprendre chaque concept de sécurité avant de passer au suivant.
 
-## 📚 Concepts abordés
+## Concepts abordés
 
 ### Chapitre 1 : Identification des risques de sécurité
 
@@ -204,7 +204,7 @@
   - Reporting de conformité
   - Traçabilité des actions
 
-## 🏃 Labs pratiques
+## Labs pratiques
 
 ### Lab 1 : Configuration MQTT avec TLS
 
@@ -283,7 +283,7 @@
 - Cartographie des risques
 - Plan de mitigation
 
-## 📖 Exercices
+## Exercices
 
 ### Exercice 1 : Identification des risques
 
@@ -324,7 +324,7 @@ Rédiger une politique de sécurité incluant :
 
 **Livrable** : Politique de sécurité (8-10 pages)
 
-## ⚠️ Important
+## Important
 
 **Environnement pédagogique uniquement** :
 - Tout se fait en environnement local avec données simulées
@@ -338,7 +338,7 @@ Rédiger une politique de sécurité incluant :
 - Mettre en place un monitoring de sécurité
 - Effectuer des audits de sécurité réguliers
 
-## 📚 Ressources
+## Ressources
 
 ### Documentation
 - **OWASP IoT Top 10** : https://owasp.org/www-project-internet-of-things/
@@ -352,7 +352,7 @@ Rédiger une politique de sécurité incluant :
 - **OpenSSL** : Génération de certificats
 - **OWASP ZAP** : Tests de sécurité
 
-## ✅ Checklist de validation
+## Checklist de validation
 
 Avant de passer à la Room 7, assurez-vous d'avoir :
 
@@ -364,7 +364,7 @@ Avant de passer à la Room 7, assurez-vous d'avoir :
 - [ ] Élaboré un plan de gestion des risques
 - [ ] Compris les aspects de conformité RGPD liés à la sécurité
 
-## ➡️ Suite
+## Suite
 
 Une fois cette room terminée, passez à [Room 7 : Observabilité et MLOps](../room-7-observability-mlops-lite/).
 

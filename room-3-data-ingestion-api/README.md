@@ -2,7 +2,7 @@
 
 > Création d'API REST pour l'ingestion de données IoT
 
-## 📋 Objectifs pédagogiques
+## Objectifs pédagogiques
 
 À la fin de cette room, vous serez capable de :
 
@@ -12,11 +12,11 @@
 - Gérer les erreurs et la résilience
 - Implémenter l'authentification basique (dev uniquement)
 
-## 🎯 Durée estimée
+## À propos de cette room
 
-4-6 heures
+Cette room vous apprend à créer des API REST pour recevoir des données IoT. Travaillez à votre rythme et assurez-vous de bien comprendre chaque étape.
 
-## 📚 Concepts abordés
+## Concepts abordés
 
 1. **API REST pour IoT**
    - Endpoints pour l'ingestion
@@ -36,13 +36,13 @@
    - Séparation des couches (API, Service, Repository)
    - Gestion des erreurs centralisée
 
-## 🛠️ Prérequis
+## Prérequis
 
 - Rooms 1 et 2 terminées
 - Docker et Docker Compose
 - Python 3.9+ (FastAPI) ou Node.js 18+ (Express)
 
-## 🚀 Installation
+## Installation
 
 ### Démarrer les services
 
@@ -66,7 +66,7 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-## 📁 Structure de la room
+## Structure de la room
 
 ```
 room-3-data-ingestion-api/
@@ -80,11 +80,11 @@ room-3-data-ingestion-api/
     └── test_api.py
 ```
 
-## 🏃 Lab 1 : API d'ingestion basique
+## Lab 1 : API d'ingestion basique
 
 Créer un endpoint `/api/v1/sensors/data` qui accepte des données de capteurs.
 
-## ➡️ Suite
+## Suite
 
 Une fois cette room terminée, passez à [Room 4 : Traitement stream et stockage](../room-4-stream-processing-storage/).
 

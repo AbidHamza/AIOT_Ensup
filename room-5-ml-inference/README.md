@@ -2,7 +2,7 @@
 
 > Intégration de modèles ML pour la prédiction et la détection d'anomalies
 
-## 📋 Objectifs pédagogiques
+## Objectifs pédagogiques
 
 À la fin de cette room, vous serez capable de :
 
@@ -12,11 +12,11 @@
 - Détecter le drift des données
 - Calculer et optimiser les coûts d'inférence
 
-## 🎯 Durée estimée
+## À propos de cette room
 
-6-8 heures
+Cette room vous apprend à intégrer des modèles de machine learning dans vos systèmes IoT. Prenez le temps de bien comprendre les concepts avant de passer à l'implémentation.
 
-## 📚 Concepts abordés
+## Concepts abordés
 
 1. **Inférence ML pour IoT**
    - Prédiction de séries temporelles
@@ -33,11 +33,11 @@
    - Performance du modèle
    - Métriques de qualité
 
-## 🏃 Lab 1 : Modèle de prédiction de température
+## Lab 1 : Modèle de prédiction de température
 
 Entraîner un modèle pour prédire la température future basé sur l'historique.
 
-## ➡️ Suite
+## Suite
 
 Une fois cette room terminée, passez à [Room 6 : Sécurité AIoT](../room-6-security-aiot/).
 

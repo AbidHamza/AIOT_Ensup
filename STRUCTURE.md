@@ -188,4 +188,4 @@ aiot-academy/
 8. **Room 7** : Observabilité (6-8h) - Monitoring
 9. **Room 8** : Projet final (12-16h) - Intégration complète
 
-**Total estimé** : 70-90 heures de formation pratique
+**Note** : Cette formation est conçue pour être complétée à votre propre rythme. Prenez le temps nécessaire pour bien comprendre chaque concept.

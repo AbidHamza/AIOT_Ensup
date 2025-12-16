@@ -5,9 +5,38 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Language: Français](https://img.shields.io/badge/Language-Français-blue.svg)](README.md)
 
-## 🎯 Objectif
+## Table des matières
+
+- [Objectif](#objectif)
+- [Comment utiliser cette formation](#comment-utiliser-cette-formation)
+- [Structure du dépôt](#structure-du-dépôt)
+- [Démarrage rapide](#démarrage-rapide)
+- [Roadmap de formation](#roadmap-de-formation)
+- [Architecture AIoT de référence](#architecture-aiot-de-référence)
+- [Glossaire technique](#glossaire-technique)
+- [Technologies utilisées](#technologies-utilisées)
+- [Bonnes pratiques d'apprentissage](#bonnes-pratiques-dapprentissage)
+- [Sécurité et Éthique](#sécurité-et-éthique)
+- [Dépannage](#dépannage)
+- [Comment soumettre votre travail](#comment-soumettre-votre-travail)
+- [Contribution](#contribution)
+- [Support](#support)
+
+**Astuce** : Consultez le [Guide de navigation](GUIDE-NAVIGATION.md) pour une aide visuelle à la navigation dans le dépôt.
+
+## Objectif
 
 Ce dépôt pédagogique vous accompagne dans l'apprentissage de l'architecture AIoT (Artificial Intelligence + Internet of Things) à travers une progression structurée en "rooms" (salles de formation). Chaque room contient des concepts théoriques, des exercices pratiques et des labs exécutables localement.
+
+### Approche pédagogique
+
+Cette formation suit une approche progressive et pratique :
+
+1. **Théorie appliquée** : Chaque concept est expliqué avec des exemples concrets et des cas d'usage réels
+2. **Pratique immédiate** : Des exercices guidés vous permettent de mettre en pratique immédiatement les concepts appris
+3. **Progression structurée** : Les rooms s'appuient les unes sur les autres pour construire progressivement vos compétences
+4. **Autonomie** : Des explications détaillées vous permettent d'apprendre à votre rythme
+5. **Validation** : Des checklists vous aident à valider vos acquis avant de passer à la suite
 
 ### Objectifs globaux
 
@@ -22,7 +51,28 @@ Ce dépôt pédagogique vous accompagne dans l'apprentissage de l'architecture A
 
 **Conforme au programme RNCP38920 - Expert des systèmes connectés (IoT)**
 
-## 📚 Structure du dépôt
+## Comment utiliser cette formation
+
+### Pour les débutants
+
+Si vous débutez dans l'IoT et l'AIoT, suivez cette progression :
+
+1. **Commencez par la Room 0** : Elle pose les fondations théoriques et vous familiarise avec l'écosystème IoT/AIoT
+2. **Lisez attentivement chaque README** : Ils contiennent toutes les explications nécessaires
+3. **Faites les exercices dans l'ordre** : Chaque exercice prépare le suivant
+4. **Prenez votre temps** : La compréhension est plus importante que la vitesse
+5. **Consultez les ressources** : Des liens vers la documentation officielle sont fournis dans chaque room
+
+### Pour les apprenants expérimentés
+
+Si vous avez déjà de l'expérience :
+
+1. **Consultez les checklists** : Elles vous indiquent rapidement ce que vous devez maîtriser
+2. **Allez directement aux labs pratiques** : Les concepts théoriques sont résumés au début de chaque room
+3. **Explorez les exercices avancés** : Certains exercices proposent des défis supplémentaires
+4. **Adaptez la progression** : Vous pouvez accélérer certaines rooms selon vos besoins
+
+## Structure du dépôt
 
 ```
 aiot-academy/
@@ -43,73 +93,120 @@ aiot-academy/
 └── SOLUTIONS/                         # Solutions détaillées (après essai)
 ```
 
-## 🚀 Démarrage rapide
+## Démarrage rapide
 
 ### Prérequis
 
+Avant de commencer, assurez-vous d'avoir installé :
+
 - **Python 3.9+** (ou Node.js 18+ selon les rooms)
-- **Docker** et **Docker Compose** (recommandé)
-- **Git**
-- Terminal : PowerShell (Windows) ou Terminal (Mac/Linux)
+  - Vérification : `python --version` ou `python3 --version`
+  - Téléchargement : https://www.python.org/downloads/
+- **Docker** et **Docker Compose** (recommandé pour simplifier l'installation)
+  - Vérification : `docker --version` et `docker-compose --version`
+  - Téléchargement : https://www.docker.com/get-started
+- **Git** (pour cloner le dépôt)
+  - Vérification : `git --version`
+  - Téléchargement : https://git-scm.com/downloads
+- **Terminal** : PowerShell (Windows) ou Terminal (Mac/Linux)
+
+### Pourquoi Docker ?
+
+Docker simplifie grandement l'installation et la configuration :
+- **Isolation** : Chaque service fonctionne dans son propre environnement
+- **Reproductibilité** : L'environnement est identique pour tous les apprenants
+- **Simplicité** : Pas besoin d'installer manuellement chaque service
+- **Nettoyage facile** : Vous pouvez supprimer tout l'environnement d'un coup si nécessaire
 
 ### Installation avec Docker (Recommandé)
 
-1. **Cloner le dépôt**
-   ```powershell
-   # Windows PowerShell
-   git clone <repository-url>
-   cd aiot-academy
-   ```
+#### Étape 1 : Cloner le dépôt
 
-   ```bash
-   # Mac/Linux Terminal
-   git clone <repository-url>
-   cd aiot-academy
-   ```
+Cette étape télécharge tous les fichiers de la formation sur votre ordinateur.
 
-2. **Démarrer les services de base**
-   ```powershell
-   # Windows PowerShell
-   docker-compose up -d
-   ```
+```powershell
+# Windows PowerShell
+git clone <repository-url>
+cd aiot-academy
+```
 
-   ```bash
-   # Mac/Linux Terminal
-   docker-compose up -d
-   ```
+```bash
+# Mac/Linux Terminal
+git clone <repository-url>
+cd aiot-academy
+```
 
-3. **Vérifier que les services sont actifs**
-   ```powershell
-   # Windows PowerShell
-   docker-compose ps
-   ```
+**Explication** : La commande `git clone` télécharge le dépôt complet. Le dossier `aiot-academy` contiendra tous les fichiers de la formation.
 
-   ```bash
-   # Mac/Linux Terminal
-   docker-compose ps
-   ```
+#### Étape 2 : Démarrer les services de base
+
+Cette étape démarre tous les services nécessaires (MQTT broker, base de données, etc.) en arrière-plan.
+
+```powershell
+# Windows PowerShell
+docker-compose up -d
+```
+
+```bash
+# Mac/Linux Terminal
+docker-compose up -d
+```
+
+**Explication** : 
+- `docker-compose up` démarre tous les services définis dans le fichier `docker-compose.yml`
+- L'option `-d` (detached) permet de lancer les services en arrière-plan, libérant votre terminal
+- La première fois, Docker téléchargera les images nécessaires (cela peut prendre quelques minutes)
+
+#### Étape 3 : Vérifier que les services sont actifs
+
+Cette étape vous permet de vérifier que tous les services fonctionnent correctement.
+
+```powershell
+# Windows PowerShell
+docker-compose ps
+```
+
+```bash
+# Mac/Linux Terminal
+docker-compose ps
+```
+
+**Résultat attendu** : Vous devriez voir une liste de services avec le statut "Up" (actif).
+
+**En cas de problème** : Si un service ne démarre pas, consultez la section "Dépannage" ci-dessous ou les logs avec `docker-compose logs <nom-du-service>`.
 
 ### Installation sans Docker
 
-Consultez le README de chaque room pour les instructions d'installation sans Docker.
+Si vous préférez installer les services manuellement (sans Docker), consultez le README de chaque room pour les instructions détaillées. 
 
-## 📖 Roadmap de formation
+**Note** : L'installation sans Docker est plus complexe car vous devrez :
+- Installer et configurer chaque service individuellement (Mosquitto, PostgreSQL, etc.)
+- Gérer les dépendances et les versions
+- Configurer les connexions entre services manuellement
 
-| Room | Thème | Durée estimée | Prérequis |
-|------|-------|---------------|-----------|
-| [Room 0](room-0-veille-technologique/) | Veille technologique, juridique et réglementaire | 12h | Aucun |
-| [Room 1](room-1-foundations/) | Fondations IoT | 4-6h | Room 0 (recommandé) |
-| [Room 2](room-2-iot-protocols-mqtt/) | Protocoles IoT (MQTT) | 6-8h | Room 1 |
-| [Room 3](room-3-data-ingestion-api/) | Ingestion de données (API) | 4-6h | Room 2 |
-| [Room 4](room-4-stream-processing-storage/) | Traitement stream et stockage | 6-8h | Room 3 |
-| [Room 5](room-5-ml-inference/) | Inférence ML | 6-8h | Room 4 |
-| [Room 6](room-6-security-aiot/) | Sécurité AIoT (renforcé) | 12-16h | Room 5 |
-| [Room 7](room-7-observability-mlops-lite/) | Observabilité et MLOps | 6-8h | Room 6 |
-| [Room 8](room-8-capstone-end-to-end/) | Projet final end-to-end | 12-16h | Toutes les rooms |
+**Recommandation** : Utilisez Docker pour simplifier votre apprentissage, surtout si vous débutez.
 
-**Durée totale estimée : 50-70 heures**
+## Roadmap de formation
 
-## 🏗️ Architecture AIoT de référence
+Cette roadmap vous guide à travers les 9 rooms de la formation. Chaque room est conçue pour être complétée indépendamment, mais elles s'appuient les unes sur les autres pour construire progressivement vos compétences.
+
+**Important** : Prenez votre temps pour chaque room. La compréhension est plus importante que la vitesse. Chaque apprenant progresse à son propre rythme.
+
+| Room | Thème | Prérequis | Description |
+|------|-------|-----------|-------------|
+| [Room 0](room-0-veille-technologique/) | Veille technologique, juridique et réglementaire | Aucun | Fondations théoriques et méthodologiques |
+| [Room 1](room-1-foundations/) | Fondations IoT | Room 0 (recommandé) | Bases techniques de l'IoT |
+| [Room 2](room-2-iot-protocols-mqtt/) | Protocoles IoT (MQTT) | Room 1 | Communication IoT avec MQTT |
+| [Room 3](room-3-data-ingestion-api/) | Ingestion de données (API) | Room 2 | Création d'API REST pour l'IoT |
+| [Room 4](room-4-stream-processing-storage/) | Traitement stream et stockage | Room 3 | Traitement de données en temps réel |
+| [Room 5](room-5-ml-inference/) | Inférence ML | Room 4 | Intégration de modèles ML |
+| [Room 6](room-6-security-aiot/) | Sécurité AIoT | Room 5 | Sécurisation complète des systèmes |
+| [Room 7](room-7-observability-mlops-lite/) | Observabilité et MLOps | Room 6 | Monitoring et gestion du cycle de vie ML |
+| [Room 8](room-8-capstone-end-to-end/) | Projet final end-to-end | Toutes les rooms | Projet complet intégrant tous les concepts |
+
+## Architecture AIoT de référence
+
+Cette section présente l'architecture globale d'un système AIoT. Vous comprendrez mieux cette architecture au fur et à mesure de votre progression dans les rooms.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -143,11 +240,13 @@ Consultez le README de chaque room pour les instructions d'installation sans Doc
   - Redis : `6379`
   - Dashboard : `8080`
 
-## 📚 Glossaire AIoT
+## Glossaire technique
+
+Ce glossaire définit les termes techniques utilisés dans cette formation. N'hésitez pas à y revenir si vous rencontrez un terme que vous ne comprenez pas.
 
 | Terme | Définition |
 |-------|------------|
-| **AIoT** | Artificial Intelligence + Internet of Things. Intégration de l'IA dans les systèmes IoT. |
+| **AIoT** | Artificial Intelligence + Internet of Things. Intégration de l'intelligence artificielle dans les systèmes IoT. |
 | **MQTT** | Message Queuing Telemetry Transport. Protocole de messagerie léger pour IoT. |
 | **Broker** | Serveur MQTT qui reçoit et distribue les messages entre clients. |
 | **Topic** | Canal de communication MQTT (ex: `sensors/temperature/room1`). |
@@ -162,7 +261,9 @@ Consultez le README de chaque room pour les instructions d'installation sans Doc
 | **mTLS** | Mutual TLS. Authentification mutuelle avec certificats (client et serveur s'authentifient). |
 | **DPIA** | Data Protection Impact Assessment. Analyse d'impact sur la protection des données (obligatoire RGPD dans certains cas). |
 
-## 🛠️ Technologies utilisées
+## Technologies utilisées
+
+Cette formation utilise des technologies standards de l'industrie pour vous préparer aux environnements professionnels réels.
 
 ### Par défaut (si non spécifié dans `/ressource`)
 
@@ -173,26 +274,69 @@ Consultez le README de chaque room pour les instructions d'installation sans Doc
 - **ML** : scikit-learn (modèles simples) + endpoint `/predict`
 - **Tests** : scripts bash/PowerShell, curl, Postman
 
-## ✅ Bonnes pratiques
+## Bonnes pratiques d'apprentissage
 
-1. **Sécurité** : Aucune clé réelle, secrets mockés, environnement local uniquement
-2. **Sécurité renforcée** : Room 6 inclut une approche complète de la sécurité (authentification, chiffrement, RGPD, gestion des risques)
-3. **Conformité** : Respect des réglementations (RGPD) et bonnes pratiques de sécurité (OWASP IoT Top 10, NIST)
-4. **Éthique** : Exemples pédagogiques uniquement, pas de procédures nuisibles
-5. **Progression** : Suivre les rooms dans l'ordre (commencer par Room 0 pour la veille)
-6. **Pratique** : Faire tous les exercices avant de consulter les solutions
-7. **Documentation** : Lire les README de chaque room avant de commencer
-8. **Veille** : Mettre en place une veille technologique et réglementaire continue (Room 0)
+Pour tirer le meilleur parti de cette formation, suivez ces bonnes pratiques :
 
-## 🔒 Sécurité et Éthique
+### Organisation de votre apprentissage
 
-- ⚠️ **Tout se fait en environnement local** (Docker/localhost) avec données simulées
-- ⚠️ **Aucune procédure nuisible** (intrusion, contournement, sabotage)
-- ⚠️ **Pas de clés réelles** ou secrets en dur
-- ⚠️ **Pas d'API payantes obligatoires** (mode mock/local fourni)
-- ⚠️ **Exemples pédagogiques uniquement**
+1. **Progression séquentielle** : Suivez les rooms dans l'ordre. Chaque room prépare la suivante et construit sur les concepts précédents.
 
-## 🐛 Dépannage
+2. **Lecture attentive** : Lisez complètement le README de chaque room avant de commencer les exercices. Les explications théoriques sont essentielles.
+
+3. **Pratique régulière** : Faites tous les exercices et labs. La pratique est la clé de la compréhension.
+
+4. **Validation des acquis** : Utilisez les checklists de validation pour vous assurer que vous maîtrisez les concepts avant de passer à la suite.
+
+5. **Documentation personnelle** : Prenez des notes sur ce que vous apprenez. Cela vous aidera à retenir et à réviser.
+
+### Sécurité et éthique
+
+1. **Environnement local uniquement** : Tout se fait en local avec des données simulées. Aucune clé réelle ou secret de production n'est utilisé.
+
+2. **Conformité** : Respectez les réglementations (RGPD) et les bonnes pratiques de sécurité (OWASP IoT Top 10, NIST).
+
+3. **Éthique** : Les exemples sont purement pédagogiques. Aucune procédure nuisible n'est enseignée.
+
+### Approche pédagogique recommandée
+
+1. **Théorie puis pratique** : Lisez d'abord les concepts théoriques, puis faites les exercices pratiques.
+
+2. **Expérimentation** : N'hésitez pas à modifier le code et à expérimenter. C'est ainsi que vous apprendrez vraiment.
+
+3. **Consultation des solutions** : Essayez d'abord de résoudre les exercices par vous-même avant de consulter les solutions.
+
+4. **Veille continue** : Mettez en place une veille technologique dès la Room 0 et maintenez-la active.
+
+## Sécurité et Éthique
+
+### Environnement pédagogique
+
+Cette formation se déroule entièrement dans un environnement local et sécurisé :
+
+- **Données simulées uniquement** : Toutes les données utilisées sont générées localement pour l'apprentissage
+- **Pas de clés réelles** : Aucune clé API, secret ou certificat de production n'est utilisé
+- **Pas d'API payantes** : Tous les services sont disponibles localement ou en mode mock
+- **Isolation complète** : Rien n'est connecté à Internet ou à des systèmes externes
+
+### Éthique et responsabilité
+
+- **Exemples pédagogiques uniquement** : Tous les exemples sont conçus pour l'apprentissage
+- **Aucune procédure nuisible** : Aucune technique d'intrusion, contournement ou sabotage n'est enseignée
+- **Respect des réglementations** : La formation respecte les réglementations en vigueur (RGPD, etc.)
+
+### Passage à la production
+
+Lorsque vous passerez à un environnement de production réel, vous devrez :
+
+- Utiliser des certificats émis par une autorité de certification reconnue
+- Mettre en place une gestion des secrets professionnelle (AWS Secrets Manager, Azure Key Vault, etc.)
+- Implémenter un monitoring de sécurité complet
+- Effectuer des audits de sécurité réguliers
+
+## Dépannage
+
+Cette section vous aide à résoudre les problèmes les plus courants. Si vous rencontrez un problème non listé ici, consultez le README de la room concernée ou la section dépannage spécifique.
 
 ### Problèmes Docker
 
@@ -210,26 +354,162 @@ Consultez le README de chaque room pour les instructions d'installation sans Doc
 - **Connexion refusée** : Vérifier que Mosquitto est démarré (`docker-compose ps`)
 - **Messages non reçus** : Vérifier les topics et QoS (Quality of Service)
 
-## 🤝 Contribution
+## Contribution
 
-Voir [CONTRIBUTING.md](CONTRIBUTING.md) pour les guidelines de contribution.
+Les contributions sont les bienvenues ! Voir [CONTRIBUTING.md](CONTRIBUTING.md) pour les guidelines de contribution.
 
-## 📄 Licence
+## Licence
 
 MIT License - Voir le fichier LICENSE pour plus de détails.
 
-## 🙏 Remerciements
+## Remerciements
 
-Ce dépôt pédagogique est inspiré par les meilleures pratiques de l'industrie pour l'AIoT.
+Ce dépôt pédagogique est inspiré par les meilleures pratiques de l'industrie pour l'AIoT et suit le programme RNCP38920 - Expert des systèmes connectés (IoT).
 
-## 📞 Support
+## Comment soumettre votre travail
+
+### Structure de soumission
+
+Pour chaque room complétée, vous devez créer un dossier avec votre nom dans le format suivant :
+
+```
+votre-nom-room-X/
+├── README.md              # Votre rapport/notes sur la room
+├── code/                  # Votre code source
+│   ├── fichiers.py
+│   └── ...
+├── exercices/             # Vos réponses aux exercices
+│   └── exercice-1.md
+└── livrables/            # Les livrables demandés (rapports, analyses, etc.)
+    └── rapport-veille.md
+```
+
+### Étapes pour soumettre votre travail
+
+#### Étape 1 : Préparer votre dossier de travail
+
+1. Créez un dossier avec votre nom et le numéro de la room
+   - Exemple : `dupont-room-1/` pour la Room 1
+   - Exemple : `martin-room-0/` pour la Room 0
+
+2. Organisez votre travail dans ce dossier :
+   - Tous vos fichiers de code
+   - Vos réponses aux exercices
+   - Les livrables demandés (rapports, analyses, etc.)
+   - Un README.md expliquant ce que vous avez fait
+
+#### Étape 2 : Documenter votre travail
+
+Créez un fichier `README.md` dans votre dossier qui explique :
+
+- **Ce que vous avez appris** : Les concepts que vous avez compris
+- **Ce que vous avez fait** : Les exercices et labs que vous avez complétés
+- **Les difficultés rencontrées** : Les problèmes que vous avez rencontrés et comment vous les avez résolus
+- **Les points à améliorer** : Ce que vous aimeriez approfondir
+
+**Exemple de structure de README.md :**
+
+```markdown
+# Room X - [Votre nom]
+
+## Ce que j'ai appris
+
+- Concept 1 : [explication]
+- Concept 2 : [explication]
+
+## Exercices complétés
+
+- [x] Lab 1 : Simulateur de capteur
+- [x] Exercice 1 : Analyse comparative
+- [ ] Exercice 2 : [en cours]
+
+## Difficultés rencontrées
+
+- Problème avec... Résolu en...
+
+## Livrables
+
+- [Lien vers vos fichiers]
+```
+
+#### Étape 3 : Vérifier avant de soumettre
+
+Avant de soumettre, vérifiez que :
+
+- [ ] Tous vos fichiers sont dans le bon dossier
+- [ ] Votre README.md est complet et bien formaté
+- [ ] Votre code est commenté et fonctionne
+- [ ] Vous avez complété au moins les exercices obligatoires
+- [ ] Vous n'avez pas inclus de fichiers sensibles (mots de passe, clés API, etc.)
+
+#### Étape 4 : Soumettre votre travail
+
+**Option 1 : Via Git (recommandé)**
+
+Si vous utilisez Git :
+
+```bash
+# Ajouter votre dossier
+git add votre-nom-room-X/
+
+# Créer un commit avec un message descriptif
+git commit -m "Room X - [Votre nom] - [Description brève]"
+
+# Pousser vers le dépôt
+git push origin main
+```
+
+**Option 2 : Via fichier compressé**
+
+1. Compressez votre dossier en ZIP
+2. Nommez-le : `votre-nom-room-X.zip`
+3. Envoyez-le selon les instructions de votre formateur
+
+**Option 3 : Via plateforme d'apprentissage**
+
+Si vous utilisez une plateforme (Moodle, Teams, etc.), suivez les instructions spécifiques de votre formateur.
+
+### Conseils pour une bonne soumission
+
+1. **Soyez organisé** : Une structure claire facilite la correction
+2. **Documentez bien** : Expliquez ce que vous avez fait et pourquoi
+3. **Testez votre code** : Assurez-vous que tout fonctionne avant de soumettre
+4. **Respectez les consignes** : Lisez attentivement ce qui est demandé dans chaque room
+5. **Demandez de l'aide si besoin** : N'hésitez pas à poser des questions avant la date limite
+
+### Format des noms de fichiers
+
+Pour faciliter la correction, utilisez des noms de fichiers clairs :
+
+- `temperature_sensor.py` (bon)
+- `exercice-1-analyse.md` (bon)
+- ❌ `travail.py` (trop vague)
+- ❌ `exo1.md` (pas assez descriptif)
+
+### Questions fréquentes
+
+**Q : Dois-je soumettre toutes les rooms en même temps ?**
+R : Non, vous pouvez soumettre chaque room au fur et à mesure que vous la complétez.
+
+**Q : Que faire si je n'ai pas terminé tous les exercices ?**
+R : Soumettez ce que vous avez fait. Indiquez dans votre README ce qui reste à faire.
+
+**Q : Puis-je travailler en groupe ?**
+R : Consultez les instructions de votre formateur. Si le travail de groupe est autorisé, indiquez clairement les membres du groupe dans votre README.
+
+**Q : Que faire si je rencontre un problème technique ?**
+R : Documentez le problème dans votre README et essayez de le résoudre. Si vous n'y arrivez pas, demandez de l'aide avant la date limite.
+
+## Support
 
 Pour toute question ou problème :
-1. Consulter les README de chaque room
-2. Vérifier la section Dépannage ci-dessus
-3. Ouvrir une issue sur le dépôt (si public)
+
+1. **Consultez les README** : Chaque room contient des explications détaillées et une section dépannage
+2. **Vérifiez la section Dépannage** : Les problèmes les plus courants sont documentés ci-dessus
+3. **Ouvrez une issue** : Si le dépôt est public, vous pouvez ouvrir une issue pour signaler un problème ou poser une question
+4. **Contactez votre formateur** : Pour les questions spécifiques à votre formation
 
 ---
 
-**Bon apprentissage ! 🚀**
+**Bon apprentissage !**
 

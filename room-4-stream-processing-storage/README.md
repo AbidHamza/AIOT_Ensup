@@ -2,7 +2,7 @@
 
 > Traitement de données en temps réel et stockage optimisé
 
-## 📋 Objectifs pédagogiques
+## Objectifs pédagogiques
 
 À la fin de cette room, vous serez capable de :
 
@@ -12,11 +12,11 @@
 - Implémenter des agrégations temps réel
 - Gérer la rétention des données
 
-## 🎯 Durée estimée
+## À propos de cette room
 
-6-8 heures
+Cette room vous apprend à traiter des flux de données en temps réel et à les stocker efficacement. C'est un concept important pour les systèmes IoT professionnels.
 
-## 📚 Concepts abordés
+## Concepts abordés
 
 1. **Stream Processing**
    - Concepts de traitement de flux
@@ -33,11 +33,11 @@
    - Gestion des backpressure
    - Résilience
 
-## 🏃 Lab 1 : Consommateur MQTT → Stream Processor
+## Lab 1 : Consommateur MQTT → Stream Processor
 
 Créer un service qui consomme les messages MQTT, les traite et les stocke.
 
-## ➡️ Suite
+## Suite
 
 Une fois cette room terminée, passez à [Room 5 : Inférence ML](../room-5-ml-inference/).
 
