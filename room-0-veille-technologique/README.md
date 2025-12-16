@@ -1335,6 +1335,25 @@ Le sous-traitant (celui qui traite les données pour le compte du responsable) e
 
 ## Labs et exercices
 
+**IMPORTANT - Comment utiliser les exemples dans cette section :**
+
+Tous les exemples, tableaux et templates fournis dans cette section sont là pour **VOUS GUIDER** dans votre travail. Ils ne sont **PAS des réponses toutes faites** à copier.
+
+**Ce que vous devez faire :**
+- Utilisez les exemples pour **comprendre** ce qui est attendu
+- Créez **VOS PROPRES** analyses, tableaux et documents
+- Adaptez les structures proposées à **VOTRE** cas d'usage spécifique
+- Faites **VOTRE PROPRE** recherche et analyse
+
+**Ce que vous ne devez PAS faire :**
+- Copier directement les exemples sans les adapter
+- Utiliser les données d'exemple comme si c'étaient vos réponses
+- Se contenter de remplir les templates sans réflexion personnelle
+
+Les exemples sont des **modèles pédagogiques** pour vous montrer le niveau de détail attendu et la structure à suivre. Votre travail doit être **personnel** et **adapté** à votre contexte.
+
+---
+
 ### Lab 1 : Mise en place d'une veille technologique IoT
 
 **Objectif** : Configurer un système de veille sur les technologies IoT/AIoT
@@ -1682,7 +1701,9 @@ Créez un tableau de comparaison avec les critères suivants :
 - Rapports automatiques
 - Personnalisation possible
 
-**Exemple de grille de comparaison simplifiée :**
+**IMPORTANT : Ce qui suit est un EXEMPLE pour vous guider. Vous devez créer VOTRE PROPRE grille de comparaison avec VOS solutions choisies.**
+
+**Exemple de grille de comparaison (à titre indicatif uniquement) :**
 
 | Critère | Solution A (Open Source) | Solution B (Cloud) | Solution C (Hybride) |
 |---------|------------------------|-------------------|---------------------|
@@ -1693,6 +1714,19 @@ Créez un tableau de comparaison avec les critères suivants :
 | Chiffrement | TLS/SSL | TLS/SSL + AES-256 | TLS/SSL |
 | Conformité RGPD | Oui (données en Europe) | Oui (données en Europe) | Oui (données en Europe) |
 | Facilité déploiement | 2/5 (technique) | 5/5 (simple) | 3/5 (moyenne) |
+
+**Ce qui est attendu de votre part :**
+
+Vous devez créer VOTRE PROPRE tableau de comparaison avec :
+- **VOS 3 solutions réelles** (pas les exemples ci-dessus)
+- **Les critères pertinents pour VOTRE cas d'usage** (ajoutez/supprimez des critères selon vos besoins)
+- **Des données réelles** que vous aurez recherchées sur les sites des solutions, dans la documentation, ou en contactant les fournisseurs
+- **Votre analyse** : ne vous contentez pas de remplir le tableau, analysez les différences et identifiez les compromis
+
+**Structure attendue de votre grille :**
+- Colonnes : Vos 3 solutions réelles (nommez-les clairement)
+- Lignes : Critères de comparaison pertinents pour votre cas d'usage
+- Cellules : Informations factuelles et vérifiables sur chaque solution
 
 **Étape 4 : Produire une recommandation argumentée**
 
@@ -1787,9 +1821,9 @@ Les données personnelles sont toute information se rapportant à une personne p
 - Qualité de l'air (ne permet pas d'identifier une personne seule)
 - Nombre de personnes dans un espace (agrégation, ne permet pas d'identifier individuellement)
 
-**Cartographie des données :**
+**IMPORTANT : Ce qui suit est un EXEMPLE de cartographie pour le scénario donné. Vous devez créer VOTRE PROPRE cartographie en analysant le scénario.**
 
-Créez un tableau récapitulatif :
+**Exemple de cartographie des données (pour le scénario coworking) :**
 
 | Donnée | Type | Collectée par | Stockée où | Durée conservation | Permet d'identifier |
 |--------|------|---------------|------------|-------------------|---------------------|
@@ -1799,6 +1833,16 @@ Créez un tableau récapitulatif :
 | Données de présence | Indirecte | Capteurs + badges | Base de données | 1 an | Oui (via badge) |
 | Images caméras | Directe | Caméras | Serveur sécurisé | 30 jours | Oui (visage) |
 | Température | Non personnelle | Capteurs | Base de données | 2 ans | Non |
+
+**Ce qui est attendu de votre part :**
+
+Vous devez créer VOTRE PROPRE tableau de cartographie avec :
+- **Toutes les données** que le scénario collecte (relisez attentivement le scénario)
+- **Votre analyse** : pour chaque donnée, déterminez si elle est personnelle ou non et pourquoi
+- **Des durées de conservation réalistes** que vous justifiez (pourquoi cette durée ?)
+- **Votre réflexion** : comment chaque donnée permet ou non d'identifier une personne
+
+**Ne vous contentez pas de copier l'exemple** : analysez le scénario et identifiez TOUTES les données, y compris celles qui pourraient ne pas être évidentes au premier regard.
 
 **Étape 3 : Analyser les bases légales**
 
@@ -1829,7 +1873,9 @@ Le RGPD exige une "base légale" pour traiter des données personnelles. Il exis
    - Exemple acceptable : Analyser les données agrégées d'utilisation pour optimiser les espaces
    - Exemple non acceptable : Suivre individuellement chaque personne sans son consentement
 
-**Analyse recommandée :**
+**IMPORTANT : Ce qui suit est un EXEMPLE d'analyse des bases légales. Vous devez faire VOTRE PROPRE analyse en identifiant toutes les finalités du scénario.**
+
+**Exemple d'analyse des bases légales (pour le scénario coworking) :**
 
 | Finalité | Données | Base légale | Justification |
 |----------|---------|-------------|---------------|
@@ -1839,11 +1885,23 @@ Le RGPD exige une "base légale" pour traiter des données personnelles. Il exis
 | Sécurité | Images caméras | Obligation légale + intérêt légitime | Sécurité des biens et personnes |
 | Profil utilisateur | Nom, email, photo, préférences | Consentement | Données non essentielles au service |
 
+**Ce qui est attendu de votre part :**
+
+Vous devez créer VOTRE PROPRE tableau d'analyse avec :
+- **Toutes les finalités** que vous identifiez dans le scénario (relisez attentivement)
+- **Pour chaque finalité** : quelles données sont nécessaires et pourquoi
+- **Pour chaque finalité** : quelle base légale RGPD est appropriée et pourquoi
+- **Votre justification** : expliquez clairement pourquoi cette base légale est appropriée
+
+**Ne copiez pas l'exemple** : analysez le scénario et identifiez TOUTES les finalités, même celles qui pourraient ne pas être évidentes. Certaines données peuvent avoir plusieurs finalités - listez-les toutes.
+
 **Étape 4 : Identifier les risques (DPIA simplifié)**
 
 Un DPIA (Data Protection Impact Assessment) identifie les risques pour les droits et libertés des personnes.
 
-**Risques identifiés :**
+**IMPORTANT : Ce qui suit sont des EXEMPLES de risques. Vous devez identifier VOS PROPRES risques en analysant le scénario.**
+
+**Exemples de risques identifiés (pour le scénario coworking) :**
 
 1. **Risque de surveillance excessive**
    - Description : Les capteurs de présence + badges permettent de suivre en temps réel où se trouve chaque personne
@@ -1872,6 +1930,16 @@ Un DPIA (Data Protection Impact Assessment) identifie les risques pour les droit
    - Probabilité : Moyenne
    - Gravité : Faible
    - Mesures de mitigation : Définir des durées de conservation claires, automatiser la suppression
+
+**Ce qui est attendu de votre part :**
+
+Vous devez identifier VOS PROPRES risques avec :
+- **Minimum 4-5 risques** que vous aurez identifiés en analysant le scénario
+- **Pour chaque risque** : description détaillée, impact, probabilité (Faible/Moyenne/Élevée), gravité (Faible/Moyenne/Élevée)
+- **Des mesures de mitigation concrètes** pour chaque risque (pas juste "améliorer la sécurité" mais des mesures précises)
+- **Votre analyse** : pourquoi ce risque est-il présent dans ce scénario spécifique ?
+
+**Ne vous contentez pas de copier les exemples** : analysez le scénario et identifiez les risques spécifiques à ce système IoT. Certains risques peuvent être différents selon les détails du scénario.
 
 **Étape 5 : Proposer des mesures de conformité**
 
@@ -1923,7 +1991,9 @@ Un DPIA (Data Protection Impact Assessment) identifie les risques pour les droit
 
 **Plan d'action de conformité :**
 
-Créez un plan avec des actions concrètes :
+**IMPORTANT : Ce qui suit est un EXEMPLE pour vous guider. Vous devez créer VOTRE PROPRE plan d'action adapté à votre scénario.**
+
+**Exemple de plan d'action (à titre indicatif uniquement) :**
 
 | Action | Responsable | Délai | Statut |
 |--------|-------------|-------|--------|
@@ -1935,32 +2005,59 @@ Créez un plan avec des actions concrètes :
 | Réaliser audit de sécurité | Externe | 2 mois | À faire |
 | Mettre en place registre traitement | DPO | 1 mois | À faire |
 
+**Ce qui est attendu de votre part :**
+
+Vous devez créer VOTRE PROPRE plan d'action avec :
+- **Des actions spécifiques à votre scénario** (pas juste copier l'exemple)
+- **Des responsables réalistes** selon votre contexte (si c'est une petite entreprise, adaptez)
+- **Des délais réalistes** basés sur la complexité de chaque action
+- **Un statut initial** (généralement "À faire" au départ)
+- **Minimum 5-7 actions concrètes** identifiées à partir de votre analyse des risques
+
+**Structure attendue de votre plan :**
+- Actions : Mesures de mitigation concrètes et actionnables
+- Responsables : Rôles ou personnes qui seront responsables
+- Délais : Estimations réalistes (semaines ou mois)
+- Statut : État actuel de chaque action
+
+**IMPORTANT : Ce qui suit est un TEMPLATE (modèle) pour structurer votre DPIA. Vous devez le compléter avec VOS propres analyses basées sur votre scénario.**
+
 **Template pour le DPIA simplifié :**
 
 ```markdown
-# DPIA - Système de monitoring espaces coworking
+# DPIA - [Votre système IoT - Nom du projet]
 
 ## 1. Description du traitement
-[Système IoT avec capteurs pour optimiser l'utilisation des espaces]
+[Décrivez VOTRE système IoT : quels capteurs, quelles données, quels objectifs]
 
 ## 2. Données personnelles traitées
-[Liste détaillée avec cartographie]
+[Listez TOUTES les données personnelles que VOTRE système collecte, avec explication de pourquoi elles sont personnelles]
 
 ## 3. Finalités
-[Pourquoi collecter ces données ?]
+[Expliquez POURQUOI vous collectez ces données - quels sont vos objectifs précis ?]
 
 ## 4. Bases légales
-[Consentement, contrat, intérêt légitime, etc.]
+[Pour chaque finalité, identifiez la base légale RGPD appropriée et justifiez votre choix]
 
 ## 5. Risques identifiés
-[Tableau avec risques, probabilité, gravité, mesures]
+[Créez un tableau avec : risques identifiés, probabilité (Faible/Moyenne/Élevée), gravité (Faible/Moyenne/Élevée), mesures de mitigation proposées]
 
 ## 6. Mesures de mitigation
-[Mesures techniques et organisationnelles]
+[Détaillez les mesures techniques ET organisationnelles que vous mettrez en place]
 
 ## 7. Conclusion
-[Le traitement est-il conforme ? Quelles actions restent à faire ?]
+[Concluez : le traitement est-il conforme ? Quelles actions prioritaires restent à faire ?]
 ```
+
+**Ce qui est attendu de votre part :**
+
+Vous devez compléter ce template avec :
+- **Votre analyse personnelle** basée sur le scénario fourni (système de monitoring d'espaces de coworking)
+- **Des risques réels** que vous aurez identifiés en analysant le scénario
+- **Des mesures concrètes** adaptées au scénario, pas des généralités
+- **Une conclusion argumentée** : le système est-il conforme ? Que faut-il faire pour le rendre conforme ?
+
+**Ne copiez pas** les exemples du guide. Utilisez-les comme référence pour comprendre ce qui est attendu, puis faites VOTRE propre analyse.
 
 ### Exercice 1 : Avantages et inconvénients des environnements connectés
 
